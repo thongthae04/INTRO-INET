@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ฟอร์มสมัครเรียนต่อระดับปริญญาตรี</title>
+</head>
+<body>
+    <h1>ฟอร์มสมัครเรียนต่อระดับปริญญาตรี</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- ส่วนที่ 1: ข้อมูลส่วนตัว -->
+        <fieldset>
+            <legend>ข้อมูลส่วนตัว</legend>
+            <label>คำนำหน้าชื่อ:
+                <select name="prefix">
+                    <option value="นาย">นาย</option>
+                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาง">นาง</option>
+                </select>
+            </label><br><br>
+
+            <label>ชื่อ: <input type="text" name="firstname" required></label><br><br>
+            <label>นามสกุล: <input type="text" name="lastname" required></label><br><br>
+            <label>เลขประจำตัวประชาชน: <input type="text" name="id_card" maxlength="13" required></label><br><br>
+            <label>วันเดือนปีเกิด: <input type="date" name="birthdate" required></label><br><br>
+            <label>อายุ (ปี): <input type="number" name="age" min="15" required></label><br><br>
+
+            <label>เพศ:</label>
+            <input type="radio" name="gender" value="ชาย">ชาย
+            <input type="radio" name="gender" value="หญิง">หญิง
+            <input type="radio" name="gender" value="ไม่ระบุ">ไม่ระบุ
+            <br><br>
+
+            <label>สัญชาติ: <input type="text" name="nationality" required></label><br><br>
+            <label>เชื้อชาติ: <input type="text" name="ethnicity" required></label><br><br>
+            <label>ศาสนา: <input type="text" name="religion" required></label><br><br>
+            <label>เบอร์โทรศัพท์: <input type="tel" name="phone" required></label><br><br>
+            <label>อีเมล: <input type="email" name="email" required></label><br><br>
+            <label>ที่อยู่: <br>
+                <textarea name="address" rows="4" cols="50" required></textarea>
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- ส่วนที่ 2: ข้อมูลการสมัครเรียน -->
+        <fieldset>
+            <legend>ข้อมูลการสมัครเรียน</legend>
+            <label>วุฒิที่จบมา: 
+                <input type="radio" name="degree" value="ม.6">ม.6
+                <input type="radio" name="degree" value="ปวช.">ปวช.
+                <input type="radio" name="degree" value="ปวส.">ปวส.
+            </label><br><br>
+
+            <label>ชื่อสถานศึกษาที่จบ: <input type="text" name="graduated_school" required></label><br><br>
+            <label>ปีที่จบ: <input type="number" name="graduation_year" required></label><br><br>
+            <label>GPA: <input type="number" step="0.01" name="gpa" min="0" max="4" required></label><br><br>
+
+            <label>สาขาที่สมัคร:
+                <select name="program">
+                    <option value="IT">IT</option>
+                    <option value="ITI">ITI</option>
+                    <option value="INE">INE</option>
+                    <option value="INET">INET</option>
+                </select>
+            </label><br><br>
+
+            <label>เหตุผลที่เลือกสาขา:<br>
+                <textarea name="reason" rows="4" cols="50"></textarea>
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- ส่วนที่ 3: ประวัติการศึกษา -->
+        <fieldset>
+            <legend>ประวัติการศึกษา</legend>
+
+            <h4>ประถมศึกษา</h4>
+            <label>สถานศึกษา: <input type="text" name="primary_school"></label><br>
+            <label>จังหวัด: <input type="text" name="primary_province"></label><br>
+            <label>ปีที่เข้า: <input type="number" name="primary_start_year"></label><br>
+            <label>ปีที่จบ: <input type="number" name="primary_end_year"></label><br>
+            <label>วุฒิที่ได้รับ: <input type="text" name="primary_cert"></label><br>
+            <label>GPA: <input type="number" step="0.01" name="primary_gpa"></label><br><br>
+
+            <h4>มัธยมต้น</h4>
+            <label>สถานศึกษา: <input type="text" name="junior_school"></label><br>
+            <label>จังหวัด: <input type="text" name="junior_province"></label><br>
+            <label>ปีที่เข้า: <input type="number" name="junior_start_year"></label><br>
+            <label>ปีที่จบ: <input type="number" name="junior_end_year"></label><br>
+            <label>วุฒิที่ได้รับ: <input type="text" name="junior_cert"></label><br>
+            <label>GPA: <input type="number" step="0.01" name="junior_gpa"></label><br><br>
+
+            <h4>มัธยมปลาย / ปวช. / ปวส.</h4>
+            <label>สถานศึกษา: <input type="text" name="senior_school"></label><br>
+            <label>จังหวัด: <input type="text" name="senior_province"></label><br>
+            <label>ปีที่เข้า: <input type="number" name="senior_start_year"></label><br>
+            <label>ปีที่จบ: <input type="number" name="senior_end_year"></label><br>
+            <label>วุฒิที่ได้รับ: <input type="text" name="senior_cert"></label><br>
+            <label>GPA: <input type="number" step="0.01" name="senior_gpa"></label><br>
+        </fieldset>
+
+        <br>
+
+        <!-- ส่วนที่ 4: เอกสารแนบ -->
+        <fieldset>
+            <legend>เอกสารแนบ</legend>
+            <label>แนบสำเนาบัตรประชาชน:
+                <input type="file" name="id_card_copy" accept=".pdf,.jpg,.jpeg,.png">
+            </label><br><br>
+            <label>แนบไฟล์วุฒิการศึกษา (ปพ.1):
+                <input type="file" name="education_file" accept=".pdf,.jpg,.jpeg,.png" multiple>
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- ส่วนที่ 5: ยืนยันและส่งฟอร์ม -->
+        <fieldset>
+            <legend>ยืนยันข้อมูล</legend>
+            <label>
+                <input type="checkbox" name="confirm" required>
+                ข้าพเจ้าขอยืนยันว่าข้อมูลทั้งหมดเป็นความจริง
+            </label><br><br>
+
+            <input type="submit" value="ส่งใบสมัคร">
+            <input type="reset" value="ล้างข้อมูลทั้งหมด">
+        </fieldset>
+
+    </form>
+</body>
+</html>
